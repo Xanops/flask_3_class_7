@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 align="center" class="work">Works log</h1>
+{% for item in journal%}
+    <h2>Action #{{item.id}}</h2>
+    <table cellpadding="20">
+        <tr aria-colspan="2" align="center" bgcolor="#C0C0C0"><th>Title of activity</th><th>Team leader</th><th>Duration</th><th>List of collaborators</th><th>Is finished</th></tr>
+        <tr bgcolor="#e0e0e0"><td>{{item.job}}</td><td>{{item.team_leader}}</td><td>{{item.work_size}}</td><td>{{item.collaborators}}</td><td>{{item.is_finished}}</td></tr>
+    </table>
+{% endfor %}
+{% endblock %}
